@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header .logo {
+    width: 20%;
+    text-align: center;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+}
+
+.navbar {
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-content {
+    padding: 10px;
+}
+
+fieldset {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #333;
+}
+
+.image-media, .gallery-item, .icon-media {
+    width: 100%;
+    height: 150px;
+    background-color: #f9f9f9;
+    border: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.text-section {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.gallery-item {
+    width: 45%;
+    height: 150px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer-icons, .footer-logo {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-media {
+    width: 50px;
+    height: 50px;
+    background-color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+}
+
+
+.menu-icon.active + .navbar {
+    display: flex;
+}
+
+
+@media screen and (min-width: 768px) {
+    .header .logo {
+        width: 30%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        position: static;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .image-media, .gallery-item {
+        height: 200px;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .header, .footer {
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .image-media, .gallery-item {
+        height: 250px;
+    }
+
+    .icon-media {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+
